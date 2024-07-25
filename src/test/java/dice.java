@@ -11,11 +11,16 @@ public class dice {
         int rounds;
 
         while (true) {
+
             System.out.print("Enter Number of Rounds (1-99): ");
             rounds = scanner.nextInt();
+
             if (rounds >= 1 && rounds <= 99) {
+
                 break;
+
             } else {
+
                 System.out.println("Please enter a valid number between 1 and 99.");
             }
         }
@@ -35,27 +40,35 @@ public class dice {
                 totalPoints[0] += dice1;
                 totalPoints[1] += dice2;
                 totalPoints[2] += dice3;
+
             } else if (dice1 != dice2 && dice2 != dice3 && dice1 != dice3) {
+
                 totalPoints[0] += dice1;
                 totalPoints[1] += dice2;
                 totalPoints[2] += dice3;
+
             } else {
+
                 if (dice1 == dice2 && dice1 > 3) {
                     totalPoints[0] += 2 * dice1;
                     totalPoints[1] += 2 * dice2;
                     totalPoints[2] += dice3;
+
                 } else if (dice1 == dice3 && dice1 > 3) {
                     totalPoints[0] += 2 * dice1;
                     totalPoints[1] += dice2;
                     totalPoints[2] += 2 * dice3;
+
                 } else if (dice2 == dice3 && dice2 > 3) {
                     totalPoints[0] += dice1;
                     totalPoints[1] += 2 * dice2;
                     totalPoints[2] += 2 * dice3;
+
                 } else {
                     totalPoints[0] += dice1;
                     totalPoints[1] += dice2;
                     totalPoints[2] += dice3;
+
                 }
             }
 
